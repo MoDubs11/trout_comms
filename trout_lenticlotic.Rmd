@@ -1,0 +1,113 @@
+---
+title: "Trout Community Analysis"
+author: "Maureen Anne Williams"
+date: "5/27/2021"
+output: html_document
+---
+
+```{r}
+
+library(tidyverse)
+library(vegan)
+library(cowplot)
+library(factoextra)
+library(ggordiplots)
+
+rescale <- function(x) {
+   av=mean(x,na.rm = T)
+   stdev=sd(x,na.rm=T)
+  ((x-av)/stdev) +1
+ }
+
+SE=function(x) { sqrt(var(x)/length(x)) } #Calculates standard error of the mean
+
+conf95 = function(x){quantile(x,c(0.025,0.975))} #calculates 95% confidence intervals
+
+#To generate ellipses for the nmds plots
+veganCovEllipse <- function (cov, center = c(0, 0), scale = 1, npoints = 100) 
+{
+  theta <- (0:npoints) * 2 * pi/npoints
+  Circle <- cbind(cos(theta), sin(theta))
+  t(center + scale * t(Circle %*% chol(cov)))
+}
+
+trout_data<-read_csv("Brown trout helminth community.csv")  
+
+```
+
+
+```{r}
+
+
+troutset<-trout_data %>% 
+  select(`Acanthocephalus clavula`:`Diplozooan paradoxum`)
+troutexplain<- trout_data 
+trout.nmds = metaMDS(troutset,k=2)
+trout.fit = envfit(trout.nmds, troutset, permutations = 999)
+trout.plot <- as.data.frame(scores(trout.nmds, display = "sites")) #save NMDS results into dataframe
+trout.plot <- cbind(trout.plot, Habitat = troutexplain$habitat) #add grouping variable "Management" to dataframe
+#add grouping variable of cluster grouping to dataframe
+#site.scrs <- cbind(site.scrs, Site = rownames(site.scrs)) #add site names as variable if you want to display on plot
+
+m<-gg_ordiplot(trout.nmds, groups=factor(trout.plot$Habitat))
+nmds_plot<-m$plot+ 
+  theme_classic()+ 
+  scale_colour_manual(values = c("blueviolet", "darkorange"))+
+  theme(panel.background = element_rect(fill = NA, colour = "black", linetype = "solid"))+
+  labs(colour = "Habitat", title="")+ # add legend labels for Management and Landuse
+  guides(size = FALSE)+
+  theme(legend.position = c(0.2,0.85), legend.text = element_text(size = 12), 
+        legend.title = element_text(size = 12), axis.text = element_text(size = 10)) # add legend at right of plot 
+
+trout.dist <- vegdist(troutset)
+trout.ano <- anosim(trout.dist, troutexplain$habitat)
+plot(anig.ano)
+plot(anig.ano,
+  xlab = "Habitat",
+  ylab = "Distance Rank",
+  title = "") +
+theme_classic()
+
+panelb<-autoplot(trout.ano,
+  notch = TRUE,
+  varwidth = TRUE,
+  xlab = "Habitat",
+  ylab = "Distance Rank",
+  title = "") +
+   scale_fill_manual(values =  inferno(3))+
+theme_classic()
+
+(sim <- with(troutexplain, simper(troutset, habitat)))
+summary(sim, ordered = TRUE)
+simper_results<-summary(sim, ordered = TRUE)
+stargazer(simper_results$Lake_River, type="html", summary=FALSE, out="table1.doc")
+
+cowplot::plot_grid(nmds_plot, panelb, labels = c('a.', 'b.'))
+
+
+```
+
+
+```{r}
+
+
+
+```
+
+```{r}
+
+
+
+```
+
+```{r}
+
+
+
+```
+
+```{r}
+
+
+
+```

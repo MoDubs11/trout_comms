@@ -1,0 +1,30 @@
+
+<table style="text-align:center"><tr><td colspan="7" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"></td><td>average</td><td>sd</td><td>ratio</td><td>ava</td><td>avb</td><td>cumsum</td></tr>
+<tr><td colspan="7" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Discocotyle sagittata</td><td>0.052</td><td>0.036</td><td>1.442</td><td>0.867</td><td>0.167</td><td>0.081</td></tr>
+<tr><td style="text-align:left">Salmonema ephemeridarum</td><td>0.044</td><td>0.039</td><td>1.117</td><td>0.333</td><td>0.833</td><td>0.149</td></tr>
+<tr><td style="text-align:left">Eubothrium crassum</td><td>0.038</td><td>0.042</td><td>0.921</td><td>1</td><td>0.500</td><td>0.208</td></tr>
+<tr><td style="text-align:left">Diphyllobothrium ditrenum</td><td>0.036</td><td>0.036</td><td>0.996</td><td>0.600</td><td>0.333</td><td>0.265</td></tr>
+<tr><td style="text-align:left">Crepidostomum farionis</td><td>0.036</td><td>0.039</td><td>0.909</td><td>0.733</td><td>0.500</td><td>0.320</td></tr>
+<tr><td style="text-align:left">Acanthocephalus clavula</td><td>0.035</td><td>0.039</td><td>0.907</td><td>0.533</td><td>0.167</td><td>0.375</td></tr>
+<tr><td style="text-align:left">Crepidostomum metoecus</td><td>0.034</td><td>0.038</td><td>0.900</td><td>0.533</td><td>0.500</td><td>0.428</td></tr>
+<tr><td style="text-align:left">Rhabdochona sp</td><td>0.034</td><td>0.038</td><td>0.891</td><td>0.200</td><td>0.500</td><td>0.481</td></tr>
+<tr><td style="text-align:left">Cystidicola farionis</td><td>0.034</td><td>0.037</td><td>0.920</td><td>0.467</td><td>0.500</td><td>0.533</td></tr>
+<tr><td style="text-align:left">Raphidascaris acus</td><td>0.032</td><td>0.035</td><td>0.913</td><td>0.333</td><td>0.500</td><td>0.583</td></tr>
+<tr><td style="text-align:left">Cucullanus truttae</td><td>0.031</td><td>0.034</td><td>0.925</td><td>0</td><td>0.500</td><td>0.632</td></tr>
+<tr><td style="text-align:left">Pomphorhynchus laevis sensu lato</td><td>0.031</td><td>0.035</td><td>0.884</td><td>0.533</td><td>1</td><td>0.681</td></tr>
+<tr><td style="text-align:left">Diphyllobothrium dendriticum</td><td>0.028</td><td>0.033</td><td>0.855</td><td>0.467</td><td>0</td><td>0.724</td></tr>
+<tr><td style="text-align:left">Capillariidae sp</td><td>0.023</td><td>0.035</td><td>0.675</td><td>0</td><td>0.333</td><td>0.761</td></tr>
+<tr><td style="text-align:left">Acanthocephalus lucii</td><td>0.022</td><td>0.029</td><td>0.753</td><td>0.333</td><td>0.167</td><td>0.795</td></tr>
+<tr><td style="text-align:left">Diplostomum gasterostei</td><td>0.020</td><td>0.026</td><td>0.747</td><td>0.133</td><td>0.333</td><td>0.825</td></tr>
+<tr><td style="text-align:left">Sphaerostoma bramae</td><td>0.017</td><td>0.024</td><td>0.727</td><td>0.067</td><td>0.333</td><td>0.852</td></tr>
+<tr><td style="text-align:left">Diplostomum spathaceum</td><td>0.016</td><td>0.026</td><td>0.621</td><td>0.200</td><td>0.167</td><td>0.877</td></tr>
+<tr><td style="text-align:left">Anisakis sp</td><td>0.016</td><td>0.028</td><td>0.563</td><td>0.267</td><td>0</td><td>0.902</td></tr>
+<tr><td style="text-align:left">Diplostomum sp</td><td>0.013</td><td>0.026</td><td>0.497</td><td>0.067</td><td>0.167</td><td>0.922</td></tr>
+<tr><td style="text-align:left">Camallanus lacustris</td><td>0.012</td><td>0.021</td><td>0.573</td><td>0.133</td><td>0.167</td><td>0.941</td></tr>
+<tr><td style="text-align:left">Diplozooan paradoxum</td><td>0.011</td><td>0.025</td><td>0.433</td><td>0</td><td>0.167</td><td>0.958</td></tr>
+<tr><td style="text-align:left">Tetracotyle sp</td><td>0.010</td><td>0.020</td><td>0.505</td><td>0.067</td><td>0.167</td><td>0.973</td></tr>
+<tr><td style="text-align:left">Phyllodistomum conostomum</td><td>0.006</td><td>0.015</td><td>0.381</td><td>0.133</td><td>0</td><td>0.981</td></tr>
+<tr><td style="text-align:left">Crepidostomum sp</td><td>0.004</td><td>0.017</td><td>0.259</td><td>0.067</td><td>0</td><td>0.988</td></tr>
+<tr><td style="text-align:left">Hysterothylacium aduncum</td><td>0.004</td><td>0.017</td><td>0.259</td><td>0.067</td><td>0</td><td>0.995</td></tr>
+<tr><td style="text-align:left">Diphyllobothrium sp</td><td>0.003</td><td>0.012</td><td>0.262</td><td>0.067</td><td>0</td><td>1</td></tr>
+<tr><td colspan="7" style="border-bottom: 1px solid black"></td></tr></table>
